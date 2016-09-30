@@ -1,6 +1,8 @@
 Nginx
 =====
 
+[![Build Status](https://travis-ci.org/jebovic/ansible-nginx.svg?branch=master)](https://travis-ci.org/jebovic/ansible-nginx)
+
 Install and configure Nginx, add your own virtualhosts from yaml variables
 
 Role Variables
