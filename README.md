@@ -1,7 +1,7 @@
 Nginx
 =====
 
-[![Build Status](https://travis-ci.org/jebovic/ansible-nginx.svg?branch=master)](https://travis-ci.org/jebovic/ansible-nginx)
+[![Build Status](https://travis-ci.org/jebovic/ansible-nginx.svg?branch=master)](https://travis-ci.org/jebovic/ansible-nginx) [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jebovic.nginx-blue.svg?style=flat)](https://galaxy.ansible.com/jebovic/nginx)
 
 Install and configure Nginx, add your own virtualhosts from yaml variables
 
