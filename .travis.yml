@@ -27,6 +27,10 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
   # test role tasks
+  - docker exec --tty "$(cat ${container_id})" env TERM=xterm systemctl --no-pager status nginx
+  - docker exec --tty "$(cat ${container_id})" env TERM=xterm systemctl --no-pager stop nginx
+  - docker exec --tty "$(cat ${container_id})" env TERM=xterm systemctl --no-pager start nginx
+  - curl http://localhost
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
