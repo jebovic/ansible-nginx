@@ -28,4 +28,4 @@ nginx_custom_vhosts:
     rewrites: false
 
 # Specific link with php fpm
-php_fpm_socket_path: /var/run/php5-fpm.sock
+php_fpm_socket_path: /var/run/php-fpm.sock
