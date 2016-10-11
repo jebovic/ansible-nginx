@@ -8,7 +8,7 @@ nginx_pid_file: /var/run/nginx.pid
 nginx_worker_connections: 768
 nginx_default_access_log: /var/log/nginx/access.log
 nginx_default_error_log: /var/log/nginx/error.log
-nginx_default_root: /srv/www
+nginx_default_root: /var/www
 nginx_default_host: "{{ ansible_host }}"
 nginx_default_index: index.php index.html;
 nginx_includes:
