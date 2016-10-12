@@ -1,5 +1,17 @@
 ---
 
+- name: install key
+  apt_key:
+    url: "{{ nginx_apt_key_url }}"
+    state: present
+
+- name: add repos
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ nginx_apt_repositories }}"
+
 - name: install apt packages
   apt:
     name:  "{{ item }}"
@@ -7,10 +19,7 @@
     install_recommends: false
     update_cache:       yes
     cache_valid_time:   300
-  with_items:
-    - nginx
-    - nginx-full
-    - nginx-common
+  with_items: "{{ nginx_packages }}"
 
 - name: config
   template:

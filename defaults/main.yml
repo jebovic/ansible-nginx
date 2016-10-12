@@ -1,5 +1,13 @@
 ---
 
+# Nginx install configuration
+nginx_apt_key_url: https://nginx.org/keys/nginx_signing.key
+nginx_apt_repositories:
+  - "deb http://nginx.org/packages/{{ ansible_distribution | lower }}/ {{ ansible_distribution_release | lower }} nginx"
+  - "deb-src http://nginx.org/packages/{{ ansible_distribution | lower }}/ {{ ansible_distribution_release | lower }} nginx"
+nginx_packages:
+  - nginx
+
 # Nginx basic configuration
 nginx_user: www-data
 nginx_port: 80
