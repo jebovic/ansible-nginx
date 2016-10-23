@@ -1,4 +1,4 @@
-Nginx
+yamlNginx
 =====
 
 [![Build Status](https://travis-ci.org/jebovic/ansible-nginx.svg?branch=master)](https://travis-ci.org/jebovic/ansible-nginx) [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jebovic.nginx-blue.svg?style=flat)](https://galaxy.ansible.com/jebovic/nginx)
@@ -8,7 +8,7 @@ Install and configure Nginx, add your own virtualhosts from yaml variables
 Role Variables
 --------------
 
-```
+```yaml
 # Nginx basic configuration
 nginx_user: www-data
 nginx_port: 80
@@ -43,11 +43,16 @@ php_fpm_socket_path: /var/run/php5-fpm.sock
 Example Playbook
 ----------------
 
+```yaml
+- hosts: servers
+  roles:
+     - { role: jebovic.nginx }
 ```
-    - hosts: servers
-      roles:
-         - { role: jebovic.nginx }
-```
+
+Tags
+----
+
+* nginx_config : only update config and restart service
 
 License
 -------
