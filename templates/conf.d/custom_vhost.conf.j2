@@ -32,7 +32,7 @@ server {
     {% endfor %}
     {%- endif %}
 
-    {% if vhost.active_php -%}
+    {% if vhost.active_php is defined and vhost.active_php -%}
     # pass the PHP scripts to FastCGI server from upstream phpfcgi
     location ~ ^/({{ vhost.front_controller|default('.*') }})\.php(/|$) {
         include fastcgi_params;
